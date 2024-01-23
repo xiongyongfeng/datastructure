@@ -1,4 +1,5 @@
 #include "BinaryTree.h"
+#include "BalanceTree.h"
 #include <iostream>
 
 void print_val(int x)
@@ -23,5 +24,19 @@ int main()
   tree.Remove(47);
   tree.MidOrdTrav(print_val);
   std::cout << "\n";
+
+  // 平衡树测试
+  BalanceTree btTree;
+  btTree.Insert(10);
+  btTree.Insert(20);
+  btTree.Insert(30);
+  btTree.Insert(40);
+  btTree.Insert(50);
+  btTree.Insert(60);
+  btTree.Remove(40);
+  btTree.inorderTraversal(print_val);
+  std::cout << "\n";
+  std::cout << "是否是平衡树: " << btTree.IsBalTree() << std::endl;
+
   return 0;
 }

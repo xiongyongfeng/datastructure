@@ -1,16 +1,19 @@
-typedef struct TreeNode
-{
-  /* data */
-  int val;
-  TreeNode *left;
-  TreeNode *right;
-  TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-} TreeNode;
+#ifndef _BINARYTREE_H_
+#define _BINARYTREE_H_
 
 typedef void (*pFunc)(int);
 
 class BinaryTree
 {
+  typedef struct TreeNode
+  {
+    /* data */
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+  } TreeNode;
+
 private:
   /* data */
   TreeNode *m_pRoot;
@@ -25,3 +28,5 @@ public:
   void Remove(int val) { m_pRoot = Remove(m_pRoot, val); }
   void MidOrdTrav(pFunc pF) { MidOrdTrav(m_pRoot, pF); }
 };
+
+#endif

@@ -1,6 +1,6 @@
 #include "BinaryTree.h"
 
-TreeNode *BinaryTree::Insert(TreeNode *node, int val)
+BinaryTree::TreeNode *BinaryTree::Insert(TreeNode *node, int val)
 {
   if (node == nullptr)
   {
@@ -19,7 +19,7 @@ TreeNode *BinaryTree::Insert(TreeNode *node, int val)
   return node;
 }
 
-TreeNode *BinaryTree::FindMaxLeftNode(TreeNode *node)
+BinaryTree::TreeNode *BinaryTree::FindMaxLeftNode(TreeNode *node)
 {
   // 调用此函数时默认左侧字数存在,为了通用性,依然对不存在的情况进行了处理
   TreeNode *tmp = node->left;
@@ -33,7 +33,7 @@ TreeNode *BinaryTree::FindMaxLeftNode(TreeNode *node)
   }
   return tmp;
 }
-TreeNode *BinaryTree::Remove(TreeNode *node, int val)
+BinaryTree::TreeNode *BinaryTree::Remove(TreeNode *node, int val)
 {
   if (node == nullptr)
   {
